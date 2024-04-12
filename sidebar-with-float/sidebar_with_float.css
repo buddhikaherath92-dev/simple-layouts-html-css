@@ -15,3 +15,16 @@ body {
     width: 20%;
     float: left;
 }
+
+@media screen and (max-width: 768px) {
+
+    #sidebar {
+        width: 100%;
+        float: none;
+        height:40vh;
+    }
+    #main_wrapper {
+        width: 100%;
+    }
+
+}
