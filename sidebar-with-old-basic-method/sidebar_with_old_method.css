@@ -4,13 +4,20 @@ body{
 
 #main_wrapper {
     background-color: aquamarine;
-    width: 100vw;
+    /* width: 100vw;   -> This is not needed, the reason is each div comes with display:block property by default
+    which takes the full width of parent element or device screen */
     height: 100vh;
+    /* 
+        There is an interesting behavior about this height property. When it comes to vertical height, it can be defined either here in the parent element
+        or in the child element. If it is defined in the parent element, then the height of the parent element is taken as the height of the child element.
+        *****But, if the height is defined as pixels, the height of the child element won't change or inherited from the parent element. 
+     */
 }
 
 #sidebar {
     background-color: rgb(255, 255, 255);
-    height: 100vh;
+    /* height: 100vh; -> No need to specify this. Because when the parent element or any other sibling element has this height defined, 
+    this should automatically adjust sets this height ---- But this is only valid for vertical height. Not for specific values defined in pixels */
     width: 20%;
     display: block;
 }
