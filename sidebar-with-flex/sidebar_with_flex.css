@@ -1,0 +1,23 @@
+body{
+    margin:0%;
+}
+
+#main_wrapper {
+    /* Here does not need to define width because the div element has block attribute by default. */
+    height: 100vh;
+    display: flex; /* Defining this as a flex container */
+    background-color: aqua;
+}
+
+#sidebar {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    flex:0 0 20%; /* Here this property has three attributes. The first one is flex-gow and the second one is flex-shrink */
+}
+
+@media screen and (max-width: 768px) {
+    #sidebar {
+        flex-basis: 100%;
+        height: 40vh;
+    }
+}
