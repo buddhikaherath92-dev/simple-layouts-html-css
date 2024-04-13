@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.wrapper {
+    background-color: blue;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(5, 1fr); This way you can create specified rows for our grid */
+    /* grid-auto-rows: minmax(100px, auto);  Here we will define a rule for our implicit rows that will auto created */
+    /* minmax attribute above sets the minimum and maximum value they can be */
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
+
+.item{
+    padding: 10px;
+    border:2 solid yellow;
+    background-color: red;
+}
+
+.item_one {
+    grid-column-start:1;
+    grid-column-end:3;
+}
+
+.item_three, .item_four {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
