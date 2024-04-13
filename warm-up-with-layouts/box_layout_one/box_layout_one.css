@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box; /* This specifies the box sizing - which does not adjust the width of the div when padding is applied. */
+}
+
+body {
+    padding: 0%;
+    margin: 0%;
+}
+
+.container {
+    background-color: blue;
+    display: grid;
+    grid-template-columns: auto auto; /* Here we define the main grid column structure */
+    gap:1em;
+    padding: 4em;
+}
+
+.container > div {
+    background-color: rgb(255, 0, 0);
+    padding: 1em;
+    min-height: 200px;
+}
+
+.item_five {
+    grid-column-start: 1; /* This item five starts in the begining of the grid which is column line 1 and the end is column line 3 */
+    grid-column-end: 3;
+}
